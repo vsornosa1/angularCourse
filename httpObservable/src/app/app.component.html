@@ -1,0 +1,20 @@
+<div>
+    <u><h1> New submitted posts: </h1></u>
+    <input type="text" [(ngModel)]="postData.title" />
+    <input type="text" [(ngModel)]="postData.body" />
+    <button (click)="submitPost()"> Submit Post </button>
+</div>
+
+<div *ngIf="showSubmittedPost">
+    <h3> {{ showSubmittedPost.title}} </h3>
+    <p> {{ showSubmittedPost.body }} </p>
+</div>
+
+<hr/>
+
+<u><h1> Default posts: </h1></u>
+<div *ngFor="let post of posts">
+    <h3> {{ post.title}} </h3>
+    <p> {{ post.body }} </p>
+    <p> {{ post.userId }} </p>
+</div>

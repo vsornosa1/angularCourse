@@ -1,0 +1,88 @@
+<app-header [getInput]="inputValue" (changer)="showResults($event)"></app-header>
+<div appColorchanger [txtColor]="'yellow'" [bgColor]="'orange'">
+    Interative directive div (hover on)
+</div>
+<hr />
+(One-way data binding)
+The data we received from the component (app.component.ts --> app.component.html): {{2 == 2 ? title : "Restrict" }} {{ var1 + var2 }}
+
+<div [className]="class1"> Some Div tag </div>
+<div [className]="class2"> Another Div tag </div>
+<div [style.color]="'lightblue'" [style.background-color]="'grey'" [style.border]="'3px solid black'"> 
+Yet another div tag 
+</div>
+
+
+<hr/>
+
+
+<p><b><u> Item List: </u></b></p>
+<div>
+    <input type="text" [(ngModel)]="inputVal" />
+</div>
+<br/>
+<div>
+    <button (click)="onClick($event)"> Add to list </button>
+    <button (dblclick)="onDblClick($event)"> Double click </button>
+</div>
+<ul *ngFor="let data of collectedData">
+    <li> {{ data }} </li>
+</ul>
+
+<hr/>
+
+<p><b><u> *ngIf Logic: </u></b></p>
+<div *ngIf="!ngIfStatus && ngIfStatus; then thenBlock; else elseBlock">
+</div>
+<ng-template #thenBlock>
+    ngIfStatus:false, but *ngIf:true
+</ng-template>
+<ng-template #elseBlock>
+    *ngIf:false --> elseBlock
+</ng-template>
+
+<hr/>
+
+<p><b><u> *ngFor Logic: </u></b></p>
+<ul *ngFor="let item of ngForArray">
+    <li> {{ item }} </li>
+</ul>
+<u><i> UserInfo (*ngFor) </i></u>
+<ul *ngFor="let user of ngForArray2 let i = index">
+   <li> {{i+1}}) {{ user.id }} - {{ user.name }} - {{ user.codingLevel }} </li>
+</ul>
+
+<hr/>
+
+<p><b><u> *ngSwitch Logic: </u></b></p>
+<div [ngSwitch]="ngSwitchSource"> 
+    <div *ngSwitchCase="'JavaScript'"> 
+        So the source is Javascript
+    </div>
+    <div *ngSwitchCase="'TypeScript'"> 
+        So the source is TypeScript
+    </div>
+    <div *ngSwitchCase="'Angular'"> 
+        So the source is Angular
+    </div>
+    <div *ngSwitchDefault="'TypeScript'"> 
+        So this is the default case
+    </div>
+</div>
+
+<hr/>
+
+<p><b><u> *myIf CustomDirective logic: </u></b></p>
+    <div *appMyIf="ngIfStatus">
+        If-value: false
+    </div>
+    <div *appMyIf="!ngIfStatus">
+        If-value: true
+    </div>
+
+<hr/>
+
+<p><b><u> Setters & Getters logic: </u></b></p>
+<input type="text" [(ngModel)]="inputData" />
+{{ inputData}}
+<router-outlet></router-outlet>

@@ -1,0 +1,80 @@
+<div class="container">
+  <h1><b><u><i> Headings </i></u></b></h1>
+  <h1 class="mat-display-1"> Display 1 </h1>
+  <h1 class="mat-display-2"> Display 2 </h1>
+  <h1 class="mat-display-3"> Display 3 </h1>
+
+  <h1 class="mat-h1 mat-headline"> Headline </h1>
+  <h1 class="mat-h2 mat-title"> Title </h1>
+  <h1 class="mat-h3 mat-subheading-1"> Subheading 1 </h1>
+  <h1 class="mat-h3 mat-subheading-2"> Subheading 2 </h1>
+
+  <h1 class="mat-body mat-body-1"> Body 1 </h1>
+  <h1 class="mat-body-strong mat-body-2"> Body 2 (+ bold) </h1>
+
+
+  <hr/>
+
+
+  <p><b><u><i> Buttons </i></u></b></p>
+  <button mat-button> Config run </button>
+  <button mat-button color="warn"> Exit </button><br/>
+  <button mat-raised-button color="primary"> Config run </button><br/>
+  <button mat-flat-button color="primary"> Config run </button><br/>
+  <button mat-stroked-button color="primary"> Config run </button><br/>
+  <button mat-icon-button color="primary"> ❌ </button>
+  <button mat-mini-fab color="primary"> ❌ </button>
+  <br/>
+  <p><b><u><i> Control menu </i></u></b></p>
+  <mat-button-toggle-group appearance="lagacy" vertical> 
+    <mat-button-toggle value="1st_button"> BMS LV </mat-button-toggle>
+    <mat-button-toggle value="2nd_button"> BMS HV </mat-button-toggle>
+    <mat-button-toggle value="3rd_button"> Motors </mat-button-toggle>  
+    <mat-button-toggle value="4th_button"> Navigation </mat-button-toggle>
+  </mat-button-toggle-group>
+
+
+  <hr/>
+
+  <p><b><u><i> Badges </i></u></b>
+  <div>
+    <button mat-raised-button matBadge="17" matBadgeSize="small"> Motors </button><br/><br/>
+    <button mat-raised-button color="accent" matBadgeColor="primary" matBadge="3" matBadgePosition="below before"> Motors </button>
+  </div><br/>
+
+
+  <hr/>
+
+
+  <p><b><u><i> Chips (2nd is disabled) </i></u></b></p>
+  <div>
+    <mat-chip-list>
+        <mat-chip color="primary" selected> Config Run </mat-chip>
+        <mat-chip disabled color="accent" selected> Config Run </mat-chip>
+    </mat-chip-list>
+  </div>
+
+
+  <hr/>
+
+
+  <p><b><u><i> Icons </i></u></b> - https://www.material.io/resources/icons/?style=baseline</p>
+  <button mat-icon-button>
+    <mat-icon> brightness_medium </mat-icon> 
+  </button>
+  <mat-icon color="warn"> fingerprint </mat-icon>
+
+
+  <hr/>
+
+  <p><b><u><i> Progress Spinner </i></u></b><br/><br/>
+  <mat-progress-spinner mode="indeterminate"></mat-progress-spinner><br/>
+  <mat-progress-spinner value="35" color="warn"></mat-progress-spinner><br/>
+
+  <p><b><u><i> Progress Bar </i></u></b><br/><br/>
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar><br/>
+  <mat-progress-bar value="35"></mat-progress-bar><br/>
+  <mat-progress-bar mode="buffer"></mat-progress-bar><br/>
+  <mat-progress-bar mode="query" color="warn"></mat-progress-bar><br/>
+
+</div>
