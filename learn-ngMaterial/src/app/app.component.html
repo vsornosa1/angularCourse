@@ -67,6 +67,7 @@
 
   <hr/>
 
+
   <p><b><u><i> Progress Spinner </i></u></b><br/><br/>
   <mat-progress-spinner mode="indeterminate"></mat-progress-spinner><br/>
   <mat-progress-spinner value="35" color="warn"></mat-progress-spinner><br/>
@@ -76,5 +77,265 @@
   <mat-progress-bar value="35"></mat-progress-bar><br/>
   <mat-progress-bar mode="buffer"></mat-progress-bar><br/>
   <mat-progress-bar mode="query" color="warn"></mat-progress-bar><br/>
+
+
+  <hr/>
+
+
+  <br/>
+  <p><b><u><i> Card template </i></u></b></p>
+  <mat-card class="card"> 
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title> The main card title </mat-card-title>
+        <mat-card-subtitle> The card subtitle </mat-card-subtitle>
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+      <p> Some content text for the card </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button> Config Run </button>
+      <button mat-button color="warn"> Close </button>
+    </mat-card-actions>
+    <mat-card-footer> The card footer </mat-card-footer>
+  </mat-card>
+  <br/>
+
+
+  <hr/>
+
+
+  <br/>
+  <p><b><u><i> Expansion panel </i></u></b></p>
+  <mat-expansion-panel class="expansionPanel">
+    <mat-expansion-panel-header>
+      <mat-panel-title> The expansion title </mat-panel-title>
+      <mat-panel-description> 
+        This is the panel description
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p> This is the expansion description which we will see upon expansion </p>
+    <mat-action-row>
+      <button mat-raised-button> Confirm run parameters </button>
+    </mat-action-row>
+  </mat-expansion-panel>
+  <!-- If you would like to have multiple expansion panels and open ONLY 1 at a time use: <mat-accordion></mat-accordion> -->
+  <br/>
+
+
+  <hr/>
+
+
+  <br/>
+  <p><b><u><i> Lists + Divider panel </i></u></b></p>
+  <mat-list>
+    <mat-list-item>item 1</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>item 2</mat-list-item>
+  </mat-list>
+
+  <mat-nav-list>
+    <a mat-list-item href="#"> Item 1 </a>
+    <mat-divider></mat-divider>
+    <a mat-list-item href="#"> Item 2 </a>
+  </mat-nav-list>
+
+  <mat-selection-list>
+    <mat-list-option> Option 1 </mat-list-option>
+    <mat-divider></mat-divider>
+    <mat-list-option> Option 2 </mat-list-option>
+  </mat-selection-list>
+  <br/>
+
+
+  <hr/>
+
+
+  <br/>
+  <p><b><u><i> Steppers </i></u></b></p>
+  <mat-horizontal-stepper>
+    <mat-step label="Introduction"> 
+      <p> First step - Intro </p>
+      <button mat-button matStepperNext> Next process </button>
+    </mat-step>
+    <mat-step label="Integration"> 
+      <p>  Middle step - Integration </p>
+      <button mat-button matStepperPrevious> Previous process </button>
+      <button mat-button matStepperNext> Next process </button>
+    </mat-step>
+    <mat-step label="Evaluation"> 
+      <p> Final step - Evaluation </p>
+      <button mat-button matStepperPrevious> Previous process </button>
+    </mat-step>
+  </mat-horizontal-stepper>
+
+  <mat-vertical-stepper>
+    <mat-step label="Introduction"> 
+      <p> First step - Intro </p>
+      <button mat-button matStepperNext> Next process </button>
+    </mat-step>
+    <mat-step label="Integration"> 
+      <p>  Middle step - Integration </p>
+      <button mat-button matStepperPrevious> Previous process </button>
+      <button mat-button matStepperNext> Next process </button>
+    </mat-step>
+    <mat-step label="Evaluation"> 
+      <p> Final step - Evaluation </p>
+      <button mat-button matStepperPrevious> Previous process </button>
+    </mat-step>
+  </mat-vertical-stepper>
+  <br/>
+
+
+  <hr/>
+
+
+  <br/>
+  <p><b><u><i> Tabs </i></u></b></p>
+    <!-- mat-align-tabs values: start (default), center, end -->
+  <mat-tab-group mat-align-tabs="center" animationDuration="650ms"> 
+    <mat-tab label="Tab 1">
+      <br/><p> Some random data </p>
+    </mat-tab>
+    <mat-tab label="Tab 2">
+      <br/><p> Some random data for tab 2 </p>
+    </mat-tab>
+    <mat-tab label="Tab 3">
+      <br/><p> Some random data for tab 3 </p>
+    </mat-tab>
+  </mat-tab-group>
+  <br/>
+
+
+  <hr/>
+
+
+  <br/>
+  <p><b><u><i> Grid lists </i></u></b></p>
+  <mat-grid-list cols="3" rowHeight="100px" gutterSize="20px"> <!-- (cols definition)Max 3 elements per row -->
+    <mat-grid-tile> Tile 1 </mat-grid-tile>
+    <mat-grid-tile> Tile 2 </mat-grid-tile>
+    <mat-grid-tile> Tile 3 </mat-grid-tile>
+    <mat-grid-tile> Tile 4 </mat-grid-tile>
+  </mat-grid-list>
+  <br/>
+  <mat-grid-list cols="4" rowHeight="4:2">
+    <mat-grid-tile> Tile 1 </mat-grid-tile>
+    <mat-grid-tile> Tile 2 </mat-grid-tile>
+    <mat-grid-tile> Tile 3 </mat-grid-tile>
+    <mat-grid-tile> Tile 4 </mat-grid-tile>
+  </mat-grid-list>
+  <hr/>
+  <mat-grid-list cols="3" rowHeight="100px"> 
+    <mat-grid-tile colspan="3"> Header </mat-grid-tile>
+    <mat-grid-tile colspan="3"> Navigation </mat-grid-tile>
+    <mat-grid-tile> Content 1 </mat-grid-tile>
+    <mat-grid-tile> Content 2 </mat-grid-tile>
+    <mat-grid-tile> Content 3 </mat-grid-tile>
+    <mat-grid-tile colspan="3"> Footer </mat-grid-tile>
+  </mat-grid-list>
+  <br/>
+
+
+  <hr/>
+
+
+  <br/>
+  <p><b><u><i> Toolbar </i></u></b></p>
+  <mat-toolbar color="primary"> Title </mat-toolbar>
+  <mat-toolbar color="accent">
+    <mat-toolbar-row>
+      First title row
+    </mat-toolbar-row>
+    <mat-toolbar-row>
+      First title row
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <br/>
+
+
+  <hr/>
+
+
+  <br/>
+  <p><b><u><i> Menu </i></u></b></p>
+  <button mat-button [matMenuTriggerFor]="mainMenu"> Open menu </button>
+  <mat-menu #mainMenu="matMenu" yPosition="below" xPosition="after"> <!-- yPosition needs space below to activate menu below obv -->
+    <button mat-menu-item> First item </button>
+    <button mat-menu-item> Second item </button>
+    <button mat-menu-item> Third item </button>
+    <button mat-menu-item [matMenuTriggerFor]="subMenu"> Fourth item </button>
+  </mat-menu>
+  <mat-menu #subMenu="matMenu">
+    <button mat-menu-item> 4.1 </button>
+    <button mat-menu-item> 4.2 </button>
+  </mat-menu>
+  <br/>
+
+
+  <hr/>
+
+
+  <br/>
+  <p><b><u><i> Side Navigation </i></u></b></p>
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav mode="side" closed> The Sidenav </mat-sidenav>
+    <mat-sidenav #sidenavEnd mode="over" closed position="end"> The right Sidenav </mat-sidenav>
+    <div>
+      <p> The main content </p>
+      <button mat-button (click)=sidenav.toggle() color="primary"> Toggle the Sidenav </button>
+      <button mat-button (click)=sidenavEnd.toggle() color="primary"> Toggle the Sidenav </button>
+    </div>
+  </mat-sidenav-container>
+  <br/>
+
+
+  <hr/>
+
+
+  <br/>
+  <p><b><u><i> Side Drawer </i></u></b></p>
+  <mat-drawer-container>
+    <mat-drawer mode="side" closed #sidedrawer> The side drawer </mat-drawer>
+    <mat-drawer-content>
+      <p> The main drawer content </p> 
+      <button mat-button (click)=sidedrawer.toggle() color="primary"> Toggle Side Drawer </button>
+    </mat-drawer-content>
+  </mat-drawer-container>
+  <br/>
+
+
+  <hr/>
+
+
+  <br/>
+  <p><b><u><i> Paginator </i></u></b></p>
+  <mat-paginator [length]="100" [pageSize]="20" [pageSizeOptions]="[1, 2, 5, 10, 20]"></mat-paginator>
+  <br/>
+
+
+  <hr/>
+
+
+  <br/>
+  <p><b><u><i> Tables </i></u></b></p> <!-- Check app.component.ts -->
+  <table mat-table [dataSource]="table_data">
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Student Name </th>
+      <td mat-cell *matCellDef="let student"> {{ student.name }} </td>
+    </ng-container>
+    <ng-container matColumnDef="subject">
+      <th mat-header-cell *matHeaderCellDef> Student subject </th>
+      <td mat-cell *matCellDef="let student"> {{ student.subject }} </td>
+    </ng-container>
+    <ng-container matColumnDef="age">
+      <th mat-header-cell *matHeaderCellDef> Age </th>
+      <td mat-cell *matCellDef="let student"> {{ student.age }} </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="col_names"></tr>
+    <tr mat-row *matRowDef="let row; columns: col_names"></tr>
+  </table>
+
 
 </div>

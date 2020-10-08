@@ -2,3 +2,29 @@
     margin: 20px;
     padding: 20px;
 }
+
+.card {
+    width: 200px;
+}
+
+.expansionPanel {
+    width: 600px;
+}
+
+mat-grid-tile {
+    background: lightblue;
+}
+
+mat-sidenav-container {
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+mat-drawer-container {
+    width: 500px;
+    height: 400px;
+    border: 1px solid gray;
+}

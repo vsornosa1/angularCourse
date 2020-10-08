@@ -12,6 +12,17 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatCardModule } from '@angular/material/card';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatListModule } from '@angular/material/list';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatGridListModule } from "@angular/material/grid-list";
+import { MatToolbarModule } from "@angular/material/toolbar";
+import { MatMenuModule } from "@angular/material/menu";
+import { MatSidenavModule } from "@angular/material/sidenav";
+import { MatPaginatorModule } from "@angular/material/paginator";
+import { MatTableModule } from "@angular/material/table";
 
 @NgModule({
   declarations: [
@@ -27,7 +38,18 @@ import { MatCardModule } from '@angular/material/card';
     MatIconModule,
     MatProgressSpinnerModule,
     MatProgressBarModule,
-    MatCardModule
+    MatCardModule,
+    MatDividerModule,
+    MatExpansionModule,
+    MatListModule,
+    MatStepperModule,
+    MatTabsModule,
+    MatGridListModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatSidenavModule,
+    MatPaginatorModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
